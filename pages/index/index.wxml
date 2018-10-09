@@ -1,13 +1,40 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="search">
+  <icon id="icon" type="search" size="20"></icon>
+  <input type="text" placeholder='请输入片名' placeholder-style='height:10px' confirm-type="done"/>
+</view>
+
+<!-- 滑片 -->
+<view id="swiper">
+  <view id="swiper-one">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" 
+    interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view id="swiper-two">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" 
+    interval="{{interval}}" duration="{{duration}}" style='width:355px'>
+    <block wx:for="{{swiperName}}">
+        <swiper-item>
+          <text class="slide-text" width="300">{{item}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
+</view>
+
+
+<view class="section">
+  <video id="myVideo" 
+  src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SHileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls page-gesture="true"></video>
+</view>
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="40"/>
+  </block>
 </view>
