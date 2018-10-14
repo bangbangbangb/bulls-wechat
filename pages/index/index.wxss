@@ -6,24 +6,38 @@
 #icon{
   float: left;
 }
+#swiper image {
+  width:100%;
+  height: 100%;
+}
+#swiper-two{
+  padding-top:40px;
+  height: 50px;
+}
 .section{
   padding-top:20px;
   padding-left: 20px;
 }
-#swiper{
-  padding-bottom: 20px;
-  padding-left: 20px;
+/* theme 主题 */
+#theme{
+  font-size: 20px;
+  color: #fc0;
 }
-#swiper-two{
-  margin-top:40px;
+#video-image image{
+  width: 100%;
+  height: 150px;
+  float: left;
+}
+#container{
+  width: 42%;
+  height: 150px;
+  float: left;
+  padding: 15px;
+}
+/* try-flush换一批试试 */
+/* #try-flush{
+  width: 33%;
+  font-size: 15px;
+  color: #ff0;
   height: 30px;
-  width:355px;
-}
-.slide-text{
-  height: 30px;
-  width:355px;
-}
-#myVideo{
-  height: 200px;
-  width: 320px;
-}
+} */

@@ -21,20 +21,32 @@
     interval="{{interval}}" duration="{{duration}}" style='width:355px'>
     <block wx:for="{{swiperName}}">
         <swiper-item>
-          <text class="slide-text" width="300">{{item}}</text>
+          <text class="slide-text" width="100%" style='font:20px'>{{item}}</text>
         </swiper-item>
       </block>
     </swiper>
   </view>
 </view>
 
-
-<view class="section">
-  <video id="myVideo" 
-  src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SHileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls page-gesture="true"></video>
+<view id="theme"><text>【畅想看】</text></view>
+<view id="video-list">
+  <view id="video-item">
+    <view id="video-content" wx:for="{{videoImage}}">
+      <view id='container'>
+        <view id="video-image">
+          <image src="{{item.image}}"/>
+        </view>
+        <view class="video-desc">
+            {{item.desc}}
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
-<view class="group">
-  <block wx:for="{{iconType}}">
-    <icon type="{{item}}" size="40"/>
-  </block>
+<!-- 换一批试一试 -->
+<!-- <view id='line'></view>
+<view id="try-flush">
+    <icon type="success" size="20"></icon>
+    <text>换一批试试</text>
 </view>
+<view id="trail"></view> -->
